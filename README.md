@@ -1,5 +1,7 @@
 ﻿# Evaluation Ionic - Enzo Cailac
 
+Avant de commencer, il faut executer la commande `npm install --legacy-peer-deps
+` à la racine du projet, sans le --legacy-peer-deps on forcera pas l'installation et il y aura un problème de compatibilité entre les versions de capacitor core et capacitor storage
 Dans cette application, on retrouvera comme page
 
 - Accueil (tab)
