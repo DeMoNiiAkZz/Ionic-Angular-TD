@@ -1,0 +1,7 @@
+{
+  "name": "GreenMarket",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

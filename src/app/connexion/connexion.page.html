@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>  
+    </ion-buttons>
+    <ion-title>Connexion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="connexionForm" (ngSubmit)="envoyer()">
+    <ion-item class="ion-margin-bottom"
+      [class.invalid]="!connexionForm.controls['email'].valid && connexionForm.controls['email'].touched">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" formControlName="email" required></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="!connexionForm.controls['email'].valid && connexionForm.controls['email'].touched">
+      <p>Veuillez entrer un email valide.</p>
+    </ion-text>
+
+    <ion-item class="ion-margin-bottom"
+      [class.invalid]="!connexionForm.controls['password'].valid && connexionForm.controls['password'].touched">
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input type="password" formControlName="password" required></ion-input>
+    </ion-item>
+    <ion-text color="danger"
+      *ngIf="!connexionForm.controls['password'].valid && connexionForm.controls['password'].touched">
+      <p>Le mot de passe doit contenir minimum 8 caractères.</p>
+    </ion-text>
+
+    <ion-button expand="full" type="submit" [disabled]="!connexionForm.valid" class="ion-margin-top">
+      Se connecter
+    </ion-button>
+
+
+  </form>
+</ion-content>

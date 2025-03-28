@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>  
+    </ion-buttons>
+    <ion-title>Panier</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list> 
+    <ion-item *ngFor="let produit of panier">
+      <ion-thumbnail slot="start">
+        <img [src]="produit.image" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ produit.nom }}</h2>
+        <p>{{ produit.prix }} €</p>
+      </ion-label>
+       
+      <ion-button 
+        color="danger" 
+        (click)="supprimerProduitPanier(produit.id)" 
+        expand="full">
+        Supprimer
+      </ion-button>
+    </ion-item>
+  </ion-list>
+ 
+  <ion-item>
+    <ion-label>Total</ion-label>
+    <ion-note>{{ getTotal() }} €</ion-note>
+  </ion-item>
+ 
+   
+</ion-content>

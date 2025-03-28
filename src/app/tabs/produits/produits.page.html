@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Produits</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let produit of produits">
+      <ion-thumbnail slot="start">
+        <img [src]="produit.image" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ produit.nom }}</h2>
+        <p>{{ produit.prix }} €</p>
+      </ion-label>
+      <ion-button 
+        (click)="ajouterAuPanier(produit)" 
+        [disabled]="isProduitDansPanier(produit.id)">
+        Ajouter au panier
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Bouton pour voir le panier -->
+  <ion-button (click)="voirPanier()" expand="full">
+    Voir mon panier
+  </ion-button>
+</ion-content>

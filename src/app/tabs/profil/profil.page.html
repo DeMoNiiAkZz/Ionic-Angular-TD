@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Profil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> 
+  <div *ngIf="estConnecte">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Informations de Profil</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Email :</strong> {{ email }}</p>
+        <p><strong>Rôle :</strong> {{ role === 'admin' ? 'Admin' : 'Client' }}</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-button (click)="deconnexion()">Déconnexion</ion-button>
+  </div>
+ 
+
+</ion-content>
