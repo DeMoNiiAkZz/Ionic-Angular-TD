@@ -2,13 +2,13 @@
 
 Dans cette application, on retrouvera comme page
 
--> Accueil (tab)
--> Produits (tab)
--> Profil (tab)
--> Panier
--> Connexion
--> Inscription
--> Déconnexion
+- Accueil (tab)
+- Produits (tab)
+- Profil (tab)
+- Panier
+- Connexion
+- Inscription
+- Déconnexion
 
 ## Accueil
 Dans cette page, nous avons une image qui fait office de Hero puis 3 produits récupérés via le service "Produits"
